@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="index.html"><img src="images/logo1.png" alt="" width="175px"></a>
+            </div>
+
+            <nav>
+                <ul id="menuitem">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <!-- <img width="30px" style="border-radius: 50%;"
+                src="data:image/png;base64,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"
+                alt=""> -->
+               <a href="cart.html"> <i class="fa fa-cart-plus" style="font-size:26px"></i></a>
+                <i class="fa fa-bars menu-icon" style="font-size:26px" onclick="menutoggle()"> </i>
+  
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ---------- account page--------- -->
+  
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/Untitled.png" alt="">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="reg()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+                    <form id="regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- ----------footer section------------- -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-2">
+                    <img src="images/logo1.png" alt="">
+                    <p>Loremipisicing elittempora voluptas inventore voluptates,
+                        soluta corporis et dolore quae odit eius?</p>
+
+                </div>
+                <div class="footer-col-1">
+                    <h3 style="margin-top: 20px;">Download Our App</h3>
+                    <p>Loremipisicing elitempora voluptas inventore voluptates,
+                        soluta corporis et dolore quae odit eius?</p>
+                    <div class="app-logo">
+                        <img src="imgages/product10" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-3">
+                    <h3>useful link</h3>
+                    <ul>
+                        <li><a href="">Coupons</a></li>
+                        <li><a href="">Blog Post</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Join Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Instsgram</a></li>
+                        <li><a href="">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> Copyright 2021- shoes store</p>
+        </div>
+    </div>
+
+
+    <!-- -------------------java scipt ------------ -->
+
+
+    <script>
+        var menuitem = document.getElementById("menuitem");
+
+        menuitem.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuitem.style.maxHeight == "0px") {
+                menuitem.style.maxHeight = "200px";
+            }
+            else {
+                menuitem.style.maxHeight = "0px";
+            }
+        }
+
+// ----------------js for toggle form -----------
+
+var loginform= document.getElementById("loginform");
+var regform = document.getElementById("regform");
+var indicator = document.getElementById("indicator");
+
+function reg(){
+regform.style.transform = "translateX(0px)";
+indicator.style.transform = "translateX(100px)";
+loginform.style.transform = "translateX(0px)";
+}
+function login(){
+regform.style.transform = "translateX(300px)";
+loginform.style.transform = "translateX(300px)";
+indicator.style.transform = "translateX(0px)";
+}
+    </script>
+
+
+
+</body>
+
+</html>
